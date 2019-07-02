@@ -1,0 +1,13 @@
+.work-item__section {
+    margin: $s3 0;
+}
+
+.work-item__description {
+    width: 65%;
+    line-height: $base-space * 2;
+}
+
+.work-item__companies {
+    color: $gray-40;
+    margin-top: $base-space;
+}

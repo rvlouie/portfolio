@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { Component } from "react";
-import Header from "../components/Header/header";
-import '../stylesheets/styles.scss';
+import Header from "../../components/Header/header";
+import '../../stylesheets/styles.scss';
 
 class WorkPage extends Component {
   static getInitialProps() {
@@ -16,6 +17,11 @@ class WorkPage extends Component {
           <h3>
             Work
           </h3>
+        </section>
+        <section className="work__item">
+          <Link href="/work/rubber-tracks">
+            <a>Converse Rubber Tracks Sample Library</a>
+          </Link>
         </section>
       </main>
     );
