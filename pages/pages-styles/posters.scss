@@ -1,0 +1,18 @@
+.posters__section {
+    margin-top: $s4;
+    &> div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    & img {
+        width: 100%;
+    }
+}
+
+.posters__link {
+    cursor: pointer;
+}
+
+.posters__no-link {
+    cursor: auto;
+}
