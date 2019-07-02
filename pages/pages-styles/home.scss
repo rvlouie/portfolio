@@ -1,0 +1,28 @@
+.home__container {
+    @include flex;
+    height: calc(100vh - (19rem - 5px));
+    background-color: #1684b2;
+    padding: $s4;
+}
+
+.home__content {
+    display: grid;
+    grid-template-rows: 2rem 3rem 1rem; 
+    width: 100%;
+}
+
+.home__content-item {
+    color: $white;
+    font-weight: 200;
+    font-size: $h4;
+    line-height: 0.6;
+    &--design {
+        align-self: start;
+    }
+    &--music {
+        justify-self: center;
+    }
+    &--systems {
+        justify-self: end;
+    }
+}

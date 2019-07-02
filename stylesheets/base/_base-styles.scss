@@ -1,0 +1,125 @@
+// Variables, TODO move to own file
+
+$font-family: Helvetica, Arial, sans-serif;
+$body-margin: 5rem; 
+$base-font-size: 100%;
+$ratio: 1.333;
+
+//colors 
+
+$white: #fefefe;
+$black: #111;
+
+$gray-70: #555;
+
+// Mixins, TODO move to own files
+
+// Flex
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin flex-column {
+    @include flex;
+    flex-direction: column;
+}
+
+@mixin flex-jc-sb {
+    @include flex;
+    justify-content: space-between;
+}
+
+@mixin flex-jc-sb-ai-center {
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-ai-center {
+    @include flex;
+    align-items: center;
+}
+
+@mixin flex-ai-center-jc-center {
+    @include flex-ai-center;
+    justify-content: center;
+}
+
+// Type
+
+$body: $base-font-size;
+
+$h4: $base-font-size * $ratio;
+$h3: $h4 * $ratio;
+$h2: $h3 * $ratio;
+$h1: $h2 * $ratio;
+
+@mixin h1 {
+    font-size: $h1;
+}
+
+@mixin h2 {
+    font-size: $h2;
+}
+
+@mixin h3 {
+    font-size: $h3;
+}
+
+@mixin h4 {
+    font-size: $h4;
+}
+
+@mixin body {
+    font-size: $body;
+}
+
+// Space 
+
+$base-space: 1rem;
+$spacing-ratio: 1.66;
+
+$s4: $base-space * $spacing-ratio;
+$s3: $s4 * $ratio;
+$s2: $s3 * $ratio;
+$s1: $s2 * $ratio;
+
+// Transition
+
+@mixin transition($thing, $duration) {
+    transition: $thing $duration;
+}
+
+//base html items
+
+:root {
+    font-size: $base-font-size;
+    margin: 0;
+}
+
+body {
+    font-family: $font-family;
+    margin: $body-margin;
+}
+
+h1, h2, h3, h4, p, a, li {
+    margin: 0;
+    color: $black;
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}
