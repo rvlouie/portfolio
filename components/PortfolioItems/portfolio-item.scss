@@ -1,0 +1,28 @@
+.header__wrapper {
+    @include flex-jc-sb-ai-center;
+    margin-bottom: $s4;
+}
+
+.header__me, .header__links {
+    &> a {
+        @include transition(color, 0.3s);
+        &:visited {
+            color: $black;
+        }
+        &:hover {
+            color: $gray-70;
+        }
+    }
+}
+
+.header__me {
+    &> a {
+        text-decoration: none;
+    }
+}
+
+.header__links {
+    &>a {
+        margin-left: $base-space;
+    }
+}
