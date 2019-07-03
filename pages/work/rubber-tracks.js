@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Header from "../../components/Header/header";
 import '../../stylesheets/styles.scss';
-import PortfolioItem from "../../components/PortfolioItem/portfolio-item";
+import { PortfolioDescription, PortfolioHeader, PortfolioImage } from "../../components/PortfolioItems/portfolio-items";
 
 const portfolioData = {
   title: 'Converse Rubber Tracks Sample Library Case Study',
@@ -21,7 +21,11 @@ class RubberTracksPage extends Component {
     return (
       <main>
         <Header />
-        <PortfolioItem data={this.data} />
+        <PortfolioHeader 
+          title={this.data.title}
+          companies={this.data.companies} />
+        <PortfolioDescription
+          description={this.data.description__intro} />
       </main>
     );
   }
