@@ -1,0 +1,5 @@
+.player__playbutton {
+    &::before {
+        content: '\E039';
+    }
+}

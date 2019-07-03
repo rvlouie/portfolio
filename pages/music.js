@@ -1,6 +1,10 @@
 import { Component } from "react";
+import PlaylistSoundPlayer from '../components/SouncloudPlayer/SoundcloudPlayer';
 import Header from "../components/Header/header";
 import '../stylesheets/styles.scss';
+
+const CLIENT_ID = 'SAESAktgjc4pbiKb7iCENMdn4bzSJuBb&';
+const RESOLVE_URL = 'https://soundcloud.com/rvlouie/tracks';
 
 class MusicPage extends Component {
   static getInitialProps() {
@@ -16,6 +20,12 @@ class MusicPage extends Component {
           <h3>
             Music
           </h3>
+        </section>
+        <section className="music__container">
+          <PlaylistSoundPlayer 
+            clientId={CLIENT_ID}
+            resolveUrl={RESOLVE_URL}
+          />
         </section>
       </main>
     );
