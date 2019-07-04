@@ -9,7 +9,7 @@ $ratio: 1.333;
 
 $white: #fefefe;
 $black: #111;
-
+$gray-20: #eee;
 $gray-40: #acacac;
 $gray-70: #555;
 
@@ -29,6 +29,11 @@ $gray-70: #555;
 @mixin flex-jc-sb {
     @include flex;
     justify-content: space-between;
+}
+
+@mixin flex-jc-center {
+    @include flex;
+    justify-content: center;
 }
 
 @mixin flex-jc-sb-ai-center {
@@ -102,6 +107,8 @@ $s1: $s2 * $ratio;
 body {
     font-family: $font-family;
     margin: $body-margin;
+    box-sizing: border-box;
+    background: $white;
 }
 
 h1, h2, h3, h4, p, a, li {

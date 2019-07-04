@@ -1,5 +1,186 @@
-.player__playbutton {
-    &::before {
-        content: '\E039';
+.player__controls {
+    @include flex-column;
+    background: $white;
+    height: $s1 * 1.5;
+    padding: $base-space $s3;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid $gray-20;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.player__controls-buttons {
+    @include flex-jc-center;
+}
+
+$player-button-size: $s2;
+
+.player__button {
+    border: none;
+    border-radius: 100%;
+    width: $player-button-size;
+    height: $player-button-size - 1;
+    cursor: pointer;
+    &:focus {
+        outline: none;
     }
+    > svg {
+        width: $base-space;
+        @include transition(fill, 0.3s);
+        &:hover {
+            fill: $gray-40;
+        }
+    }
+    &--volume {
+        > svg {
+            width: $base-space;
+            @include transition(fill, 0.3s);
+            &:hover {
+                stroke: $gray-40;
+            }
+        }
+    }
+}
+
+.player__volume {
+    @include flex-ai-center;
+    &> div {
+        display: flex;
+    }
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 3.1px 0;
+      }
+      input[type=range]:focus {
+        outline: none;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 1.8px;
+        cursor: pointer;
+        background: $black;
+        border-radius: 5px;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        height: 8px;
+        width: 8px;
+        border-radius: 18px;
+        background: $black;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -3.1px;
+      }
+      input[type=range]:focus::-webkit-slider-runnable-track {
+        background: $black;
+      }
+      input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 1.8px;
+        cursor: pointer;
+        background: $black;
+        border-radius: 5px;
+      }
+      input[type=range]::-moz-range-thumb {
+        height: 8px;
+        width: 8px;
+        border-radius: 18px;
+        background: #000000;
+        cursor: pointer;
+      }
+      input[type=range]::-ms-track {
+        width: 100%;
+        height: 1.8px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      input[type=range]::-ms-fill-lower {
+        background: $black;
+        border-radius: 5px;
+      }
+      input[type=range]::-ms-fill-upper {
+        background: $black;
+        border: 0px solid rgba(1, 1, 0, 0);
+        border-radius: 5px;
+      }
+      input[type=range]::-ms-thumb {
+        height: 8px;
+        width: 8px;
+        border-radius: 18px;
+        background: $black;
+        cursor: pointer;
+        height: 1.8px;
+      }
+      input[type=range]:focus::-ms-fill-lower {
+        background: $black;
+      }
+      input[type=range]:focus::-ms-fill-upper {
+        background: $black;
+      }
+      
+}
+
+.player__progress-container {
+    @include flex-column;
+}
+
+.player__progress-timer {
+    align-self: flex-end;
+    font-size: $body / 1.33;
+    font-weight: bold;
+}
+
+.player__progress {
+    background-color: $gray-40;
+    height: 0.4rem;
+    border-radius: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.player__progress-inner {
+    background-color: $black;
+    height: 0.4rem;
+    border-radius: 1rem;
+}
+
+.player__track-list {
+    &> div {
+        @include flex-column;
+        margin: $s4 0 ($s1 * 2) 0;
+    }
+}
+
+.player__track {
+    background: $white;
+    @include flex-jc-sb-ai-center;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid $black;
+    padding: $s4 0;
+    @include transition(all, 0.3s);
+    &:hover {
+        padding: $s4;
+        background: $gray-20;
+    }
+    &:focus {
+        padding: $s4;
+        outline: 0;
+        background: $gray-20;
+    }
+}
+
+.player__track-image {
+    width: $s2;
+    height: auto;
+}
+
+.player__track-title, .player__track-duration {
+    @include h3;
+    font-weight: bold;
 }
