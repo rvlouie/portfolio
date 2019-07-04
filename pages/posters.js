@@ -18,7 +18,6 @@ class PostersPage extends Component {
   componentDidMount() {
     axios.get('https://res.cloudinary.com/dmizjakby/image/list/poster.json')
       .then(res => {
-        console.log(res.data.resources);
         this.setState({gallery: res.data.resources})
     }) 
   }
@@ -38,7 +37,7 @@ class PostersPage extends Component {
             {
               this.state.gallery.map(data => {
                 return(
-                  <a href={(data.context.custom.url == 'null') ? '#' : data.context.custom.url} 
+                  <a key={data.public_id} href={(data.context.custom.url == 'null') ? '#' : data.context.custom.url} 
                      className={(data.context.custom.url == 'null') ? 'posters__no-link' : 'posters__link'}>
                     <Image key={data.public_id} publicId={data.public_id + '.jpg'}>
                     </Image>
