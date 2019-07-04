@@ -40,7 +40,7 @@ class PostersPage extends Component {
                 return(
                   <a href={(data.context.custom.url == 'null') ? '#' : data.context.custom.url} 
                      className={(data.context.custom.url == 'null') ? 'posters__no-link' : 'posters__link'}>
-                    <Image publicId={data.public_id + '.jpg'}>
+                    <Image key={data.public_id} publicId={data.public_id + '.jpg'}>
                     </Image>
                   </a>
                 )

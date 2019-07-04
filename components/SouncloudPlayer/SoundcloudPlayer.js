@@ -57,9 +57,7 @@ class PlaylistSoundPlayer extends Component {
     if (!playlist) {
       return <div className="p2 center">Loading...</div>;
     }
-
-    console.log(playlist);
-
+    
     const allTracks = playlist.tracks.map((tracks, i) => {
       return (
         <button
