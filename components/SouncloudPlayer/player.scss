@@ -207,7 +207,13 @@ $player-button-size: $s2;
 
 @media all and (max-width: 550px) {
   .player__track-title, .player__track-duration {
-    font-size: $base-font-size;
+    font-size: $base-font-size * 1.3;
     font-weight: bold;
+  }
+  .player__track-title {
+    margin: 0 0.66rem;
+  }
+  .player__track {
+    padding: $base-space - 0.33rem;
   }
 }
