@@ -13,6 +13,8 @@ $gray-20: #eee;
 $gray-40: #acacac;
 $gray-70: #555;
 
+$error: #c40a00;
+
 // Mixins, TODO move to own files
 
 // Flex
@@ -97,6 +99,10 @@ $s1: $s2 * $ratio;
     transition: $thing $duration;
 }
 
+// Border Radius
+
+$border-radius: 8px;
+
 //base html items
 
 :root {
@@ -130,4 +136,43 @@ h3 {
 
 h4 {
     @include h4;
+}
+
+input {
+    border-radius: $border-radius;
+    border: none;
+    padding: ($base-space - 0.5rem) $base-space;
+    font-size: $base-font-size;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(17,17,17,0.5);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(17,17,17,0.5);
+    box-shadow: inset 0px 0px 0px 1px rgba(17,17,17,0.5);
+    @include transition(box-shadow, 0.3s);
+    &:hover {
+        -webkit-box-shadow: inset 0px 0px 0px 2px rgba(17,17,17,0.5);
+        -moz-box-shadow: inset 0px 0px 0px 2px rgba(17,17,17,0.5);
+        box-shadow: inset 0px 0px 0px 2px rgba(17,17,17,0.5);
+    }
+    &:focus {
+        outline: none;
+        -webkit-box-shadow: inset 0px 0px 0px 2px rgba(17,17,17,1);
+        -moz-box-shadow: inset 0px 0px 0px 2px rgba(17,17,17,1);
+        box-shadow: inset 0px 0px 0px 2px rgba(17,17,17,1);
+    }
+}
+
+button {
+    border-radius: 5rem;
+    color: $black;
+    background: transparent;
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(17,17,17,0.5);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(17,17,17,0.5);
+    box-shadow: inset 0px 0px 0px 1px rgba(17,17,17,0.5);
+    @include transition(box-shadow, 0.3s);
+    &:hover , &:focus{
+        -webkit-box-shadow: inset 0px 0px 0px 2px rgba(17,17,17,1);
+        -moz-box-shadow: inset 0px 0px 0px 2px rgba(17,17,17,1);
+        box-shadow: inset 0px 0px 0px 2px rgba(17,17,17,1);
+        outline: none;
+    }
 }

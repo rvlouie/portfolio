@@ -14,7 +14,8 @@ class WorkPage extends Component {
 
     this.state = {
       password: '',
-      validated: false
+      validated: false,
+      showErrorMessage: false
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -32,43 +33,58 @@ class WorkPage extends Component {
     if (this.state.password == 'ricklouie') {
       this.setState({
         validated: true
+      });
+      localStorage.setItem('validated', true);
+    } else {
+      this.setState({
+        showErrorMessage: true
       })
     }
   }
 
+  componentDidMount() {
+    if (localStorage.validated) {
+      this.setState({
+        validated: localStorage.validated
+      })    
+    }
+  }
+
   render() {
-    const validated = this.state.validated;
+    const validated = this.state.validated || this.isValidated;
+    const password = this.state.password;
+    const showErrorMessage = this.state.showErrorMessage;
+    const errorMessage = 'Hey, something went wrong, try the password again or reach out to Rick.';
     return (
-
-    
-        <main>
-          <Header />
-          <div>
-            {!validated ? 
-              ( 
-                <form onSubmit={this.handleSubmit}>
-                  <input type="password" value={this.state.password} onChange={this.handleChange} /> 
-                  <button type="submit" value="Submit">Let me in!</button>
-                </form> 
-              ) :
-              (
-                <div>
-                  <section>
-                    <h3>
-                      Work
-                    </h3>
-                  </section>
-                  <section className="work__item">
-                    <Link href="/work/rubber-tracks">
-                      <a>Converse Rubber Tracks Sample Library</a>
-                    </Link>
-                  </section>
-                </div>
-              )
-            }
-          </div>
-        </main>
-
+      <main>
+        <Header />
+        <section>
+          <h3>
+            Work
+          </h3>
+        </section>
+        <div>
+          {!validated ? 
+            ( 
+              <form className="work__password-form" onSubmit={this.handleSubmit}>
+                <label className="work__password-label">Enter password</label>
+                <input className="work__password-input" type="password" value={this.state.password} onChange={this.handleChange} /> 
+                {showErrorMessage && <div className="work__password-error">{errorMessage}</div>}
+                <button className={(password.length > 0) ? 'work__password-button' : 'work__password-button work__password-button--disabled'} type="submit" value="Submit">Show me the work</button>
+              </form> 
+            ) :
+            (
+              <div>
+                <section className="work__item">
+                  <Link href="/work/rubber-tracks">
+                    <a>Converse Rubber Tracks Sample Library</a>
+                  </Link>
+                </section>
+              </div>
+            )
+          }
+        </div>
+      </main>
     );
   }
 }

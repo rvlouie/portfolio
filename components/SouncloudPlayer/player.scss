@@ -20,12 +20,17 @@ $player-button-size: $s2;
 
 .player__button {
     border: none;
+    box-shadow: none;
     border-radius: 100%;
     width: $player-button-size;
     height: $player-button-size - 1;
     cursor: pointer;
+    &:hover {
+      box-shadow: none;
+    }
     &:focus {
         outline: none;
+        box-shadow: none;
     }
     > svg {
         width: $base-space;
@@ -54,9 +59,14 @@ $player-button-size: $s2;
         -webkit-appearance: none;
         width: 100%;
         margin: 3.1px 0;
+        box-shadow: none;
+        &:hover {
+          box-shadow: none;
+        }
       }
       input[type=range]:focus {
         outline: none;
+        box-shadow: none;
       }
       input[type=range]::-webkit-slider-runnable-track {
         width: 100%;
@@ -161,16 +171,20 @@ $player-button-size: $s2;
     @include flex-jc-sb-ai-center;
     cursor: pointer;
     border: none;
+    box-shadow: none;
+    border-radius: 0;
     border-bottom: 1px solid $black;
     padding: $s4 0;
     @include transition(all, 0.3s);
     &:hover {
         padding: $s4;
         background: $gray-20;
+        box-shadow: none;
     }
     &:focus {
         padding: $s4;
         outline: 0;
+        box-shadow: none;
         background: $gray-20;
     }
 }

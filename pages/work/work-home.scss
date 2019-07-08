@@ -1,3 +1,35 @@
+.work__password-form {
+    @include flex-ai-center-jc-center;
+    flex-direction: column;
+    height: calc(100vh - (19rem - 5px));
+}
+
+.work__password-input {
+    text-align: center;
+    padding: $base-space $s1;
+    margin: $s4;
+}
+
+.work__password-error {
+    color: $error;
+}
+
+.work__password-button {
+    margin-top: $base-space;
+    padding: ($base-space - 0.2rem) $s4;
+    font-size: $base-font-size;
+}
+
+.work__password-button--disabled {
+    cursor: not-allowed;
+    color: $gray-40;
+    &:hover {
+        -webkit-box-shadow: inset 0px 0px 0px 1px rgba(17,17,17,0.5);
+        -moz-box-shadow: inset 0px 0px 0px 1px rgba(17,17,17,0.5);
+        box-shadow: inset 0px 0px 0px 1px rgba(17,17,17,0.5);
+    }
+}
+
 .work__item {
     margin: $s4 0;
 } 
