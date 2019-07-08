@@ -70,8 +70,8 @@ class ResumePage extends Component {
           <section className="resume__experience">
             <h6 className="resume__small-header">Experience</h6>
             {this.data.experience.map(experience => 
-              <div class="resume__experience-item">
-                <div class="resume__experience-header">
+              <div className="resume__experience-item">
+                <div className="resume__experience-header">
                   <h3>{experience.company}</h3>
                   <h4 className="resume__date">{experience.dates}</h4>  
                 </div>
