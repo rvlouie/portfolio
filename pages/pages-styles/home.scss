@@ -1,14 +1,39 @@
 .home__container {
-    @include flex;
-    height: calc(100vh - (19rem - 5px));
-    background-color: #1684b2;
-    padding: $s4;
+
 }
 
 .home__content {
-    display: grid;
-    grid-template-rows: 2rem 3rem 1rem; 
-    width: 100%;
+    font-size: 6vw;
+    font-weight: bold;
+    line-height: 9vw;
+}
+
+.home__link {
+    transition: color 0.3s ease-in;
+}
+
+.home__work-link {
+    animation: color-2 ease-out 1s infinite;
+    animation-play-state: paused;
+    &:hover {
+        animation-play-state: running;
+    }
+}
+
+.home__email-link {
+    animation: color-1 ease-out 1s infinite;
+    animation-play-state: paused;
+    &:hover {
+        animation-play-state: running;
+    }
+}
+
+.home__social-link {
+    animation: color-3 ease-out 1s infinite;
+    animation-play-state: paused;
+    &:hover {
+        animation-play-state: running;
+    }
 }
 
 .home__content-item {
@@ -25,4 +50,22 @@
     &--systems {
         justify-self: end;
     }
+}
+
+@keyframes color-1 {
+    from { color: $orange; }
+    50% { color: $green }
+    to { color: $purple }
+  }
+
+@keyframes color-2 {
+    from { color: $blue; }
+    50% { color: $orange }
+    to { color: $green }
+}
+
+@keyframes color-3 {
+    from { color: $purple; }
+    50% { color: $orange }
+    to { color: $green }
 }

@@ -1,5 +1,6 @@
 import Header from "../components/Header/header";
 import '../stylesheets/styles.scss';
+import Link from "next/link";
 
 function Index() {
   return (
@@ -7,9 +8,7 @@ function Index() {
       <Header />
       <section className="home__container">
         <div className="home__content">
-          <p className="home__content-item home__content-item--design">Design</p>
-          <p className="home__content-item home__content-item--music">Music</p>
-          <p className="home__content-item home__content-item--systems">Systems</p>
+          Hello to you! Check out my <Link href="/work"><a className="home__link home__work-link">work</a></Link>, <a className="home__link home__email-link" href="mailto:rvlouie@gmail.com">get in touch</a>, and follow <a className="home__link home__social-link" href="https://twitter.com/RVLouie">@rvlouie</a> on all social media.
         </div>
       </section>
     </main>
