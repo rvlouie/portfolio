@@ -1,0 +1,58 @@
+$resume-line-height: 1.66rem;
+
+.resume__wrapper {
+    @include flex-jc-sb;
+    margin-top: $s2;
+}
+
+.resume__details {
+   border-left: 1px solid $gray-40;
+   margin-left: $s2;
+   padding-left: $s2; 
+}
+
+.resume__description {
+    line-height: $resume-line-height;
+}
+
+.resume__date {
+    margin: $base-space 0;
+    color: $gray-40;
+}
+
+.resume__experience-project {
+    margin-top: $base-space;
+}
+
+.resume__experience-project-title {
+    font-size: $base-font-size;
+    font-weight: bold;
+    color: $gray-70;
+    margin-bottom: $base-space;
+}
+
+.resume__experience-item {
+    margin-bottom: $s4;
+}
+
+.resume__details-section {
+    margin-bottom: $s4;
+}
+
+.resume__small-header {
+    margin-bottom: $s4;
+}
+
+.resume__skill-header {
+    font-size: $base-font-size;
+    margin-bottom: $s4 - 1rem;
+}
+
+.resume__list {
+    padding-left: 1.1rem;
+    margin: $base-space 0;
+}
+
+.resume__list-item {
+    line-height: $resume-line-height;
+}

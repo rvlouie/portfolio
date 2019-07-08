@@ -4,6 +4,12 @@
     height: calc(100vh - (19rem - 5px));
 }
 
+.work__password-label {
+    text-align: center;
+    line-height: 2;
+    max-width: 60vw;
+}
+
 .work__password-input {
     text-align: center;
     padding: $base-space $s1;
