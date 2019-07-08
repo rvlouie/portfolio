@@ -67,10 +67,10 @@ class WorkPage extends Component {
           {!validated ? 
             ( 
               <form className="work__password-form" onSubmit={this.handleSubmit}>
-                <label className="work__password-label">Enter password</label>
+                <label className="work__password-label">Need access? Reach out to rvlouie@gmail.com or @rvlouie on social media. Otherwise, enter the password!</label>
                 <input className="work__password-input" type="password" value={this.state.password} onChange={this.handleChange} /> 
                 {showErrorMessage && <div className="work__password-error">{errorMessage}</div>}
-                <button className={(password.length > 0) ? 'work__password-button' : 'work__password-button work__password-button--disabled'} type="submit" value="Submit">Show me the work</button>
+                <button disabled={(password.length > 0) ? false : true} className={(password.length > 0) ? 'work__password-button' : 'work__password-button work__password-button--disabled'} type="submit" value="Submit">Show me the work</button>
               </form> 
             ) :
             (
