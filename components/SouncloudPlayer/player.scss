@@ -215,5 +215,8 @@ $player-button-size: $s2;
   }
   .player__track {
     padding: $base-space - 0.33rem;
+    &:hover, &:focus {
+      padding: ($base-space - 0.33rem) 1rem;
+    }
   }
 }
