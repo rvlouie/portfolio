@@ -26,3 +26,16 @@
         margin-left: $base-space;
     }
 }
+
+@media all and (max-width: 787px) {
+    .header__wrapper {
+        flex-direction: column;
+        align-items: flex-start !important; //ugh fix this
+    }
+    .header__links {
+        margin: $base-space 0;
+        &> a {
+            margin: $base-space $base-space $base-space 0 !important; //blah fix this
+        }
+    }
+}

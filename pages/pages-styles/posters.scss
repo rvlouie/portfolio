@@ -17,3 +17,19 @@
 .posters__no-link {
     cursor: auto;
 }
+
+@media all and (max-width: 787px) {
+    .posters__section {
+        > div {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media all and (max-width: 550px) {
+    .posters__section {
+        > div {
+            grid-template-columns: 1fr;
+        }
+    } 
+}
