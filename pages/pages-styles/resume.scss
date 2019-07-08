@@ -56,3 +56,14 @@ $resume-line-height: 1.66rem;
 .resume__list-item {
     line-height: $resume-line-height;
 }
+
+@media all and (max-width: 787px) {
+    .resume__wrapper {
+        flex-direction: column;
+    }
+    .resume__details {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+}
