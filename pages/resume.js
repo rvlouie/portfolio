@@ -130,6 +130,10 @@ class ResumePage extends Component {
             </section>
           </div>
         </div>
+        <div className="resume__footer">
+          <h6 className="resume__small-header">Contact</h6>
+          <div><a href="mailto:rvlouie@gmail.com">rvlouie@gmail.com</a> • <a href="https://twitter.com/RVLouie">@rvlouie</a> • <a href="https://www.linkedin.com/in/rilouie/">Linkedin</a></div>
+        </div>
       </main>
     );
   }
