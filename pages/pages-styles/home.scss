@@ -14,7 +14,7 @@
 }
 
 .home__work-link {
-    animation: color-2 ease-out 1s infinite;
+    animation: color-2 ease-in-out 1s infinite;
     animation-play-state: paused;
     &:hover {
         animation-play-state: running;
@@ -22,7 +22,7 @@
 }
 
 .home__email-link {
-    animation: color-1 ease-out 1s infinite;
+    animation: color-1 ease-in-out 1s infinite;
     animation-play-state: paused;
     &:hover {
         animation-play-state: running;
@@ -30,7 +30,7 @@
 }
 
 .home__social-link {
-    animation: color-3 ease-out 1s infinite;
+    animation: color-3 ease-in-out 1s infinite;
     animation-play-state: paused;
     &:hover {
         animation-play-state: running;

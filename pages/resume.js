@@ -74,6 +74,7 @@ class ResumePage extends Component {
                 <div className="resume__experience-header">
                   <h3>{experience.company}</h3>
                   <h4 className="resume__date">{experience.dates}</h4>  
+                  <h4 className="resume__title">{experience.title}</h4>
                 </div>
                 <div className="resume__experience-details">
                   <p className="resume__description">{experience.description}</p>

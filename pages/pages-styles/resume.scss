@@ -20,6 +20,10 @@ $resume-line-height: 1.66rem;
     color: $gray-40;
 }
 
+.resume__title {
+    margin-bottom: $s4;
+}
+
 .resume__experience-project {
     margin-top: $base-space;
 }
@@ -65,5 +69,12 @@ $resume-line-height: 1.66rem;
         margin: 0;
         padding: 0;
         border: none;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .resume__wrapper {
+        max-width: 1000px;
+        margin: $s2 auto;
     }
 }
