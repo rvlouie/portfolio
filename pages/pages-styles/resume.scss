@@ -72,9 +72,9 @@ $resume-line-height: 1.66rem;
     }
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 1440px) {
     .resume__wrapper {
-        max-width: 1000px;
+        max-width: 1440px;
         margin: $s2 auto;
     }
 }
