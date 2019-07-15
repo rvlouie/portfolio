@@ -76,7 +76,7 @@ class WorkPage extends Component {
             (
               <div>
                 <section className="work__item">
-                  <Link href="/work/rubber-tracks">
+                  <Link href="/work/rubber-tracks-v1">
                     <a>Converse Rubber Tracks Sample Library</a>
                   </Link>
                 </section>
