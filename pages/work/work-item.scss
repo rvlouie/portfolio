@@ -38,7 +38,7 @@
 
 .work-item__status {
     margin: $s4 0;  
-    max-width: 25rem;
+    max-width: 27rem;
     @include flex-jc-sb-ai-center;  
 }
 
@@ -49,7 +49,12 @@
 }
 
 .work-item__image {
-    width: 100%;
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+.work-item__image-container {
+    @include flex;
 }
 
 .work-item__small-image {
@@ -58,5 +63,19 @@
 }
 
 .work-item__image-section {
-    @include flex-jc-sb-ai-center;  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    align-items: center;
+    .work-item__image {
+        max-width: 45vw;
+    }  
+}
+
+.work-item__related-links {
+    @include flex-column;
+}
+
+.work-item__related-link {
+    margin-bottom: $base-space;
 }

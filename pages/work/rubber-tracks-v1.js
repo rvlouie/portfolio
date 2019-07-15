@@ -30,13 +30,16 @@ const converseV1Data = {
   footerData: {
     learnings: [
       "It worked! From hard download numbers the project was a success. The project has clocked millions of downloads.",
+      "Several successful tracks were made with the content. Specifically successful, check out Mura Masa's Love$ick.",
       "A drawback to presenting stems, loops and one-shots in the same UI is that the different types aren't easily scannable. The same type of waveform UI for a stem might not work for a one-shot.",
       "Users requested 2 features: Search and bulk download. This was not unanticipated. Search was unfortunately ruled out because of development constraints. We mitigated this a bit through per pack filtering. Bulk download was another technical challenge. While ad hoc downloading was out of the question because of the high technical barrier, we wanted to find ways to address this issue while also expanding the scope and ambition of the project..."
     ],
-    related: {
-      relatedTitle: 'Converse Rubber Tracks Sample Library V2',
-      relatedLink: '/work/rubber-tracks-v2'
-    }
+    related: [
+      {
+        relatedTitle: 'Converse Rubber Tracks Sample Library V2',
+        relatedLink: '/work/rubber-tracks-v2'
+      }  
+    ]
   }
 }
 
@@ -85,10 +88,8 @@ class RubberTracksPage extends Component {
         </div>
         <PortfolioDescription
           description={this.data.description__browse} />
-        <div className="work-item__small-image">
-          <PortfolioImage 
-            imageUrl={this.data.image__packRows} />
-        </div>
+        <PortfolioImage 
+          imageUrl={this.data.image__packRows} />
         <PortfolioDescription
           description={this.data.description__conclusion} />
         <PortfolioFooter 

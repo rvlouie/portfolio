@@ -73,7 +73,7 @@ class PortfolioImage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="work-item__image-container">
         <img className="work-item__image" src={this.props.imageUrl} /> 
       </div>
     );
@@ -103,9 +103,15 @@ class PortfolioFooter extends Component {
             this.props.footerData.related && 
             <div className="work-item__section">
               <h4 className="work-item__header">Related projects</h4>
-              <Link href={this.props.footerData.related.relatedLink}>
-                <a>{this.props.footerData.related.relatedTitle}</a>
-              </Link>
+              <div className="work-item__related-links">
+                {
+                  this.props.footerData.related.map(related => 
+                    <Link href={related.relatedLink}>
+                      <a className="work-item__related-link">{related.relatedTitle}</a>
+                    </Link>
+                    )
+                }
+              </div>
             </div>
           }
         </section>

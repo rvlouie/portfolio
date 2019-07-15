@@ -84,6 +84,10 @@ $h1: $h2 * $ratio;
     font-size: $h4;
 }
 
+@mixin h5 {
+    font-size: $base-font-size * 1.11;
+}
+
 @mixin h6 {
     font-size: $base-font-size * 0.9;
     color: $gray-40;
@@ -148,6 +152,10 @@ h3 {
 
 h4 {
     @include h4;
+}
+
+h5 {
+    @include h5;
 }
 
 h6 {
