@@ -3,11 +3,33 @@ import { Component } from "react";
 import Header from "../../components/Header/header";
 import '../../stylesheets/styles.scss';
 
+const musicalLinks = [
+  {
+    name: 'Converse Sample Library V1',
+    route: '/work/rubber-tracks-v1'
+  },
+  {
+    name: 'Converse Sample Library V2',
+    route: '/work/rubber-tracks-v2'
+  },
+  {
+    name: 'Ampl Music',
+    route: '/work/ampl-music'
+  },
+  {
+    name: 'Marketplace Connections',
+    route: '/work/marketplace-connections'
+  }
+]
+
+
 class WorkPage extends Component {
   static getInitialProps() {
     const isServer = typeof window === "undefined";
     return { isServer };
   }
+
+  musicalLinkData = musicalLinks;
 
   constructor(props) {
     super(props);
@@ -75,16 +97,16 @@ class WorkPage extends Component {
             ) :
             (
               <div>
-                <section className="work__item">
-                  <Link href="/work/rubber-tracks-v1">
-                    <a>Converse Rubber Tracks Sample Library V1</a>
-                  </Link>
-                </section>
-                <section className="work__item">
-                  <Link href="/work/rubber-tracks-v2">
-                    <a>Converse Rubber Tracks Sample Library V2</a>
-                  </Link>
-                </section>
+                <h4 className="work__section-header">Musical Systems</h4>
+                {
+                  this.musicalLinkData.map((link, index) => 
+                    <section key={index} className="work__item">
+                      <Link href={link.route}>
+                        <a>{link.name}</a>
+                      </Link>
+                    </section>
+                  )
+                }
               </div>
             )
           }

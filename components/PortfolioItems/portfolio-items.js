@@ -83,6 +83,32 @@ class PortfolioImage extends Component {
 
 }
 
+class PortfolioLink extends Component {
+
+  render() {
+    return (
+      <div className="work-item__main-section">
+        <section className="work-item__section">
+          <a className="work-item__link" href={this.props.link.url} target="_blank">{this.props.link.name}</a> 
+        </section>
+      </div>
+    );
+  }
+
+}
+
+class PortfolioFigma extends Component {
+
+  render() {
+    return (
+      <section className="work-item__section work-item__section--figma">
+        <iframe className="work-item__figma" src={this.props.url} allowfullscreen></iframe>
+      </section>
+    );
+  }
+
+}
+
 class PortfolioFooter extends Component {
 
   render() {
@@ -126,5 +152,7 @@ export {
   PortfolioHeader,
   PortfolioDescription,
   PortfolioImage,
+  PortfolioLink,
+  PortfolioFigma,
   PortfolioFooter
 }

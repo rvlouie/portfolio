@@ -1,5 +1,8 @@
 .work-item__section {
     margin: $s3 0;
+    &--figma {
+        @include flex;
+    }
 }
 
 .work-item__main-section {
@@ -79,4 +82,22 @@
 
 .work-item__related-link {
     margin-bottom: $base-space;
+}
+
+.work-item__link {
+    background: $gray-10;
+    padding: $base-space $s4;
+    border-radius: $border-radius;
+    border: 1px solid $gray-20;
+    @include transition(background, 0.3s);
+    &:hover {
+        background: $gray-20;
+    }
+}
+
+.work-item__figma {
+    border: none;
+    width: 70vw;
+    height: 50vw;
+    margin: auto;
 }
