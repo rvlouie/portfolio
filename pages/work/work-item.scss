@@ -39,13 +39,14 @@
 .work-item__status {
     margin: $s4 0;  
     max-width: 27rem;
-    @include flex-jc-sb-ai-center;  
+    @include flex-ai-center;
 }
 
 .work-item__status-item {
     padding: ($base-space * 0.66) $base-space;
     border: 1px solid $black;
     border-radius: $border-radius;
+    margin-right: $base-space;
 }
 
 .work-item__image {

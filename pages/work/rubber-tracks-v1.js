@@ -7,7 +7,7 @@ const converseV1Data = {
   headerData: {
     title: 'Converse Rubber Tracks Sample Library V1',
     companies: ['Indaba Music', 'Converse', 'Cornerstone'],
-    status: 'Shipped',
+    status: ['Shipped'],
     link: 'https://www.conversesamplelibrary.com',
     video: 'https://www.youtube.com/embed/6HcHcUAN_bY',
     role: 'Content production, product design, some front-end development',

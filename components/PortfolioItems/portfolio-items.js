@@ -17,7 +17,9 @@ class PortfolioHeader extends Component {
           {
             this.props.headerData.status &&
             <div className="work-item__status">
-              <span className="work-item__status-item">{this.props.headerData.status}</span>
+              {
+                this.props.headerData.status.map(status => <span className="work-item__status-item">{status}</span>)
+              }
               {
                 this.props.headerData.link &&
                 <a className="work-item__status-link" href={this.props.headerData.link}>{this.props.headerData.link}</a>
