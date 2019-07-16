@@ -22,6 +22,17 @@ const musicalLinks = [
   }
 ]
 
+const otherLinks = [
+  {
+    name: 'Stories and Companion Packs',
+    route: '/work/stories-and-companion-packs'
+  },
+  {
+    name: 'Content Admin Principles',
+    route: '/work/content-admin-principles'
+  }
+]
+
 
 class WorkPage extends Component {
   static getInitialProps() {
@@ -30,6 +41,7 @@ class WorkPage extends Component {
   }
 
   musicalLinkData = musicalLinks;
+  otherLinkData = otherLinks;
 
   constructor(props) {
     super(props);
@@ -97,16 +109,30 @@ class WorkPage extends Component {
             ) :
             (
               <div>
-                <h4 className="work__section-header">Musical Systems</h4>
-                {
-                  this.musicalLinkData.map((link, index) => 
-                    <section key={index} className="work__item">
-                      <Link href={link.route}>
-                        <a>{link.name}</a>
-                      </Link>
-                    </section>
-                  )
-                }
+                <div className="work__link-section">
+                  <h4 className="work__section-header">Musical systems</h4>
+                  {
+                    this.musicalLinkData.map((link, index) => 
+                      <section key={index} className="work__item">
+                        <Link href={link.route}>
+                          <a>{link.name}</a>
+                        </Link>
+                      </section>
+                    )
+                  }
+                </div>
+                <div>
+                  <h4 className="work__section-header">Other projects and principles</h4>
+                  {
+                    this.otherLinkData.map((link, index) => 
+                      <section key={index} className="work__item">
+                        <Link href={link.route}>
+                          <a>{link.name}</a>
+                        </Link>
+                      </section>
+                    )
+                  }
+                </div>
               </div>
             )
           }

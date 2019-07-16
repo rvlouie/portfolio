@@ -71,6 +71,26 @@ class PortfolioDescription extends Component {
 
 }
 
+class PortfolioList extends Component {
+
+  render() {
+    return (
+      <div className="work-item__main-section">
+        <section className="work-item__section">
+          <ul className="work-item__list">
+            {
+              this.props.list.map(listItem => 
+                <li className="work-item__list-item">{listItem}</li>  
+              )
+            }
+          </ul>
+        </section>
+      </div>
+    );
+  }
+
+}
+
 class PortfolioImage extends Component {
 
   render() {
@@ -154,5 +174,6 @@ export {
   PortfolioImage,
   PortfolioLink,
   PortfolioFigma,
+  PortfolioList,
   PortfolioFooter
 }
