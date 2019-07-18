@@ -46,9 +46,9 @@ class RubberTracksPage extends Component {
         <h4 className="work-item__main-section work-item__header">Project Description</h4>
         <h4 className="work-item__main-section work-item__header work-item__header--sub-header">Sprint</h4>
         <PortfolioDescription
-          description={this.data.description__admin} />
+          description={this.data.description__intro} />
         <PortfolioLink 
-          link={this.data.link__admin} />
+          link={this.data.link__artistSprint} />
 
         <PortfolioFooter 
           footerData={this.data.footerData} />
