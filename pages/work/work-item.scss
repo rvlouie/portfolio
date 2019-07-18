@@ -106,3 +106,19 @@
     height: 50vw;
     margin: auto;
 }
+
+@media all and (max-width: 950px) {
+    .work-item__image-section {
+        @include flex-column;
+        .work-item__image {
+            width: 80vw;
+        }
+    }
+    .work-item__main-section {
+        max-width: 100%;
+    }
+    .work-item__video {
+        width: 80vw;
+        height: 50vw;    
+    }
+}
