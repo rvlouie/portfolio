@@ -138,7 +138,7 @@ class RubberTracksPageV2 extends Component {
         <PortfolioDescription
           description={this.data.description__contentDiscussion} />
         <PortfolioImage 
-            imageUrl={this.data.image__frontEndUi} />
+            imageUrl={this.data.image__contentDiscussion} />
         <PortfolioDescription
           description={this.data.description__frontEndConclusion1} />
         <PortfolioDescription

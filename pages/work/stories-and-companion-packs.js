@@ -8,6 +8,7 @@ const converseV1Data = {
     title: 'Stories and Companion Packs',
     companies: ['Splice'],
     status: ['Shipped'],
+    link: 'https://splice.com/sounds/splice/the-fantastic-sounds-of-jay-dee-aka-j-dilla/story',
     role: 'Product design, sprint facilitation, user research',
     problem: 'Sample pack narratives were limited to pack descriptions and did not allow for the insertion of media or associations with other packs.',
     value: 'Adding narrative and connectedness to sample packs would increase content immersion making.'
@@ -39,8 +40,12 @@ const converseV1Data = {
   description__conclusion: `Implementation and launch of this feature went very smoothly. I attribute this to involving a large portion of the team in the original sprint, iterating off of the work done during the sprint, getting early cross-functional consensus around the feature to be built for a specific campaign, and an effective design collaboration that afforded multiple sets of eyes on the nitty gritty details.`,
   footerData: {
     learnings: [
-      "One thing missing here is an admin for the knowledge graph. There are screens and a prototype for this, but before implementing them they'd need to be updated and fit for purpose.",
-      "More graph! Graph all the things! Now that we know institutionally how to put nodes and edges into production, we should scale this out as far as we can, starting with migrating all the existing tags into nodes and starting to create connections that the search infrastructure, ML team, and all product verticals can consume and build around."
+      `Companion packs and stories are now regularly used by the content and marketing teams to tell narratives around content.`,
+      `GV sprints are 100% worth the week of time if you can afford to block out half an iteration with your team.`,
+      `I think that companion packs should also link back to the main story. There was a missed opportunity to further fortify the relationship between the story and the companion packs.`,
+      `Due to some tech debt, this feature is logged in only. A next iteration should be available logged out so that we can drive user sign ups through a CTA and drive more SEO value for the entire platform. This problem is compounded because it's not the greatest experience to have to go one click in from a pack to get to its story, ideally we should drive people directly to the story.`,
+      `Stories should be expanded beyond packs and be attachable to any piece of content across the Splice platform (and in turn have any piece of Splice content attachable to a story), and added to the ontology. Long tail, stories can replace the external blog and bring editorial in-house.`,
+      `Companion packs were built bespoke for one purpose where in the data model companion packs must have a parent pack. This should be abstracted out so that arbitrary packs can be grouped agnostic to hierarchy (for example, multiple volumes in a pack series).`,
     ],
     related: [
       {
