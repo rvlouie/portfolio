@@ -3,7 +3,7 @@ import PlaylistSoundPlayer from '../components/SouncloudPlayer/SoundcloudPlayer'
 import Header from "../components/Header/header";
 import '../stylesheets/styles.scss';
 
-const CLIENT_ID = 'SAESAktgjc4pbiKb7iCENMdn4bzSJuBb&';
+const CLIENT_ID = 'FWvCdv5Apc7wvDHUKvfAHngHc2Ai856n';
 const RESOLVE_URL = 'https://soundcloud.com/rvlouie/tracks';
 
 class MusicPage extends Component {
