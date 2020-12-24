@@ -5,11 +5,17 @@ import '../stylesheets/styles.scss';
 const resumeData = {
   experience: [
     {
+      company: 'Teachable',
+      dates: 'September 2019 - Present',
+      title: 'Sr. Product Designer',
+      description: 'Working on a whitelabel platform for online course creation. Researched, conceptualized and tested a coaching solution that accrued over 1MM in GMV in 6 months post-launch for content creators. I serve as a pin in between design and front end engineering regarding design system component construction.'
+    },
+    {
       company: 'Splice',
       dates: 'January 2018 - July 2019',
       title: 'Product Designer',
       description: 'I came to Splice through an acquisition and spent my time on the design team supporting the library and operations team, designing a new admin and bootstrapping it with a fledgling design system, working on experimental prototypes for complicated music business products, and conceptualizing an ontology/knowledge graph for recorded music.'
-    }, 
+    },
     {
       company: 'Indaba Music',
       dates: 'October 2009 - December 2018',
@@ -41,7 +47,7 @@ const resumeData = {
       }
     ],
     musical: ['Modern DAW production', 'Sound recreation', 'Synthesis', 'Keyboard performance']
-  }, 
+  },
   education: {
     school: 'University of Miami',
     graduationDate: '2009',
@@ -69,21 +75,21 @@ class ResumePage extends Component {
         <div className="resume__wrapper">
           <section className="resume__experience">
             <h6 className="resume__small-header">Experience</h6>
-            {this.data.experience.map(experience => 
+            {this.data.experience.map(experience =>
               <div className="resume__experience-item">
                 <div className="resume__experience-header">
                   <h3>{experience.company}</h3>
-                  <h4 className="resume__date">{experience.dates}</h4>  
+                  <h4 className="resume__date">{experience.dates}</h4>
                   <h4 className="resume__title">{experience.title}</h4>
                 </div>
                 <div className="resume__experience-details">
                   <p className="resume__description">{experience.description}</p>
-                  {experience.keyProjects && 
+                  {experience.keyProjects &&
                     experience.keyProjects.map(project =>
                       <div className="resume__experience-project">
                         <h4 className="resume__experience-project-title">{project.projectTitle}</h4>
                         <p className="resume__description">{project.projectDescription}</p>
-                      </div>  
+                      </div>
                     )
                   }
                 </div>
@@ -93,7 +99,7 @@ class ResumePage extends Component {
           <div className="resume__details">
             <section className="resume__details-section">
               <h6 className="resume__small-header">Philosophy</h6>
-              <p className="resume__description">{this.data.philosophy}</p>        
+              <p className="resume__description">{this.data.philosophy}</p>
             </section>
             <section className="resume__details-section">
               <h6 className="resume__small-header">Skills</h6>
@@ -109,12 +115,12 @@ class ResumePage extends Component {
               </section>
               <section>
                 <h5 className="resume__skill-header">Concrete</h5>
-                {this.data.skills.concrete.map(realSkill => 
+                {this.data.skills.concrete.map(realSkill =>
                   <div>
                     <div>
                       <span>{realSkill.skillType}</span>
                       <ul className="resume__list">
-                        {realSkill.skillList.map(skills => 
+                        {realSkill.skillList.map(skills =>
                           <li className="resume__list-item">{skills}</li>
                         )}
                       </ul>
@@ -125,8 +131,8 @@ class ResumePage extends Component {
             </section>
             <section className="resume__details-section">
               <h6 className="resume__small-header">Education</h6>
-              <h5 className="resume__skill-header">{this.data.education.school}, {this.data.education.graduationDate}</h5>     
-              <p>{this.data.education.degree}</p>   
+              <h5 className="resume__skill-header">{this.data.education.school}, {this.data.education.graduationDate}</h5>
+              <p>{this.data.education.degree}</p>
             </section>
           </div>
         </div>
