@@ -43,7 +43,7 @@ const resumeData = {
       },
       {
         skillType: 'Languages shipped',
-        skillList: ['HTML/CSS (+ frameworks)', 'Javascript (+ Angular 1, React, React Native, Angular 2+)', 'Clojurescript (Reagent, hiccup)']
+        skillList: ['HTML/CSS (+ frameworks)', 'Javascript (+ Angular 1, React, React Native, Angular 2+, Typescript)', 'Clojurescript (Reagent, hiccup)']
       }
     ],
     musical: ['Modern DAW production', 'Sound recreation', 'Synthesis', 'Keyboard performance']
