@@ -1,9 +1,20 @@
 import { Component } from "react";
 import Header from "../components/Header/header";
-import '../stylesheets/styles.scss';
 
 const resumeData = {
   experience: [
+    {
+      company: 'Splice',
+      dates: 'March 2023 - Present',
+      title: 'Sr. Product Designer',
+      description: 'Working on AI R&D tooling, supporting building functional prototypes for UXR while also coordinating and running UXR. Worked on Sounds and multiple teams across the org, including design systems.'
+    },
+    {
+      company: 'Output',
+      dates: 'March 2021 - March 2023',
+      title: 'Sr. Product Designer',
+      description: 'I owned the core Arcade experience, initially focusing on the browser and content library, then expanding into the musical tooling. Have also done work on FX. Lead the design system “council.”'
+    },
     {
       company: 'Teachable',
       dates: 'September 2019 - Present',
@@ -35,7 +46,7 @@ const resumeData = {
   ],
   philosophy: 'I believe quality products are holistic in their design. A great experience should span across the DB, devX, content administration, interaction and interface. Quality happens when these pieces sync.',
   skills: {
-    conceptual: ['Whiteboarding', 'Wireframing', 'Domain Mapping'],
+    conceptual: ['Whiteboarding', 'Wireframing', 'User Experience Research', 'Domain Mapping'],
     concrete: [
       {
         skillType: 'Design tools',
@@ -43,7 +54,7 @@ const resumeData = {
       },
       {
         skillType: 'Languages shipped',
-        skillList: ['HTML/CSS (+ frameworks)', 'Javascript (+ Angular 1, React, React Native, Angular 2+, Typescript)', 'Clojurescript (Reagent, hiccup)']
+        skillList: ['HTML/CSS (+ frameworks)', 'Javascript (Svelte, Angular 1, React, React Native, Angular 2+, Typescript, and others)', 'Clojurescript (Reagent, hiccup)']
       }
     ],
     musical: ['Modern DAW production', 'Sound recreation', 'Synthesis', 'Keyboard performance']

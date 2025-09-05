@@ -4,20 +4,20 @@ function Header() {
   return (
     <header className="header__wrapper">
       <div className="header__personal-info">
-        <h1 className="header__me"><Link href="/"><a>Rick Louie</a></Link></h1>
+        <h1 className="header__me"><Link href="/">Rick Louie</Link></h1>
       </div>
       <div className="header__links">
         <Link href="/resume">
-          <a>Resume</a>
+          Resume
         </Link>
         <Link href="/work">
-          <a>Work</a>
+          Work
         </Link>
         <Link href="/music">
-          <a>Music</a>
+          Music
         </Link>
         <Link href="/posters">
-          <a>Posters</a>
+          Posters
         </Link>
       </div>
     </header>

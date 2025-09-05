@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Header from "../../components/Header/header";
-import '../../stylesheets/styles.scss';
 import { PortfolioDescription, PortfolioHeader, PortfolioImage, PortfolioLink, PortfolioList, PortfolioFooter } from "../../components/PortfolioItems/portfolio-items";
 
 const converseV1Data = {
@@ -18,7 +17,7 @@ const converseV1Data = {
   link__artistSprint: {
     url: 'https://res.cloudinary.com/dmizjakby/image/upload/v1563912938/portfolio/decks/e4jtukpa3iz9ydoud2b7.pdf',
     name: 'Artist Identity Sprint.pdf'
-  }, 
+  },
   description__intro3: `We wound up building and prototyping new content pages that used content created by the artist themselves to tell a story.`,
   image__sprintOverview: 'https://res.cloudinary.com/dmizjakby/image/upload/v1563203608/portfolio/stories/cskp7tiaxh0nxvnzkeue.png',
   description__listIntro: `While interviewing users on the last day we learned a few key things:`,
@@ -51,7 +50,7 @@ const converseV1Data = {
       {
         relatedTitle: 'Marketplace Connections',
         relatedLink: '/work/marketplace-connections'
-      }  
+      }
     ]
   }
 }
@@ -68,7 +67,7 @@ class RubberTracksPage extends Component {
     return (
       <main>
         <Header />
-        <PortfolioHeader 
+        <PortfolioHeader
           headerData={this.data.headerData} />
         <h4 className="work-item__main-section work-item__header">Project Description</h4>
         <h4 className="work-item__main-section work-item__header work-item__header--sub-header">Sprint</h4>
@@ -76,41 +75,41 @@ class RubberTracksPage extends Component {
           description={this.data.description__intro} />
         <PortfolioDescription
           description={this.data.description__intro2} />
-        <PortfolioLink 
+        <PortfolioLink
           link={this.data.link__artistSprint} />
         <PortfolioDescription
-          description={this.data.description__intro3} />  
-        <PortfolioImage 
+          description={this.data.description__intro3} />
+        <PortfolioImage
           imageUrl={this.data.image__sprintOverview} />
         <PortfolioDescription
-          description={this.data.description__listIntro} />  
-        <PortfolioList 
+          description={this.data.description__listIntro} />
+        <PortfolioList
           list={this.data.list__artistSprint} />
         <h4 className="work-item__main-section work-item__header">J Dilla: Pack Stories, Companion Packs</h4>
         <PortfolioDescription
-          description={this.data.description__dillaIntro} />  
-        <PortfolioImage 
-          imageUrl={this.data.image__dillaPage} />        
+          description={this.data.description__dillaIntro} />
+        <PortfolioImage
+          imageUrl={this.data.image__dillaPage} />
         <PortfolioDescription
-        description={this.data.description__dilla1} />        
+          description={this.data.description__dilla1} />
         <PortfolioDescription
-        description={this.data.description__dilla2} />        
-        <PortfolioImage 
-          imageUrl={this.data.image__navigationFlow} />  
+          description={this.data.description__dilla2} />
+        <PortfolioImage
+          imageUrl={this.data.image__navigationFlow} />
         <PortfolioDescription
-        description={this.data.description__mainPack} />        
-        <PortfolioImage 
-          imageUrl={this.data.image__mainPack} />  
+          description={this.data.description__mainPack} />
+        <PortfolioImage
+          imageUrl={this.data.image__mainPack} />
         <PortfolioDescription
-        description={this.data.description__companionPack} />        
-        <PortfolioImage 
-          imageUrl={this.data.image__companionPack} />  
+          description={this.data.description__companionPack} />
+        <PortfolioImage
+          imageUrl={this.data.image__companionPack} />
         <PortfolioDescription
-        description={this.data.description__packsConclusion} />  
+          description={this.data.description__packsConclusion} />
         <PortfolioDescription
-        description={this.data.description__conclusion} />  
+          description={this.data.description__conclusion} />
 
-        <PortfolioFooter 
+        <PortfolioFooter
           footerData={this.data.footerData} />
       </main>
     );

@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Header from "../../components/Header/header";
-import '../../stylesheets/styles.scss';
 import { PortfolioDescription, PortfolioHeader, PortfolioImage, PortfolioLink, PortfolioFigma, PortfolioFooter } from "../../components/PortfolioItems/portfolio-items";
 
 const converseV1Data = {
@@ -43,7 +42,7 @@ const converseV1Data = {
       {
         relatedTitle: 'Stories and Companion Packs',
         relatedLink: '/work/stories-and-companion-packs'
-      }  
+      }
     ]
   }
 }
@@ -60,50 +59,50 @@ class RubberTracksPage extends Component {
     return (
       <main>
         <Header />
-        <PortfolioHeader 
+        <PortfolioHeader
           headerData={this.data.headerData} />
         <h4 className="work-item__main-section work-item__header">Project Description</h4>
         <PortfolioDescription
           description={this.data.description__intro} />
-        <PortfolioImage 
+        <PortfolioImage
           imageUrl={this.data.image__marchDomain} />
         <PortfolioDescription
           description={this.data.description__commaSeparated} />
-        <PortfolioLink 
+        <PortfolioLink
           link={this.data.link__soundsModel}
         />
         <PortfolioDescription
           description={this.data.description__communication} />
-        <PortfolioImage 
+        <PortfolioImage
           imageUrl={this.data.image__ontologyV2} />
         <PortfolioDescription
           description={this.data.description__proofOfConcept} />
-        <PortfolioFigma 
+        <PortfolioFigma
           url={this.data.figma__proofOfConcept} />
         <PortfolioDescription
-          description={this.data.description__alignment} />        
-        <PortfolioImage 
+          description={this.data.description__alignment} />
+        <PortfolioImage
           imageUrl={this.data.image__graph} />
-        <PortfolioImage 
-          imageUrl={this.data.image__instance} />          
+        <PortfolioImage
+          imageUrl={this.data.image__instance} />
         <PortfolioDescription
           description={this.data.description__prototype} />
-        <PortfolioImage 
+        <PortfolioImage
           imageUrl={this.data.image__prototype} />
         <PortfolioDescription
           description={this.data.description__prototypeResults} />
-        <PortfolioImage 
+        <PortfolioImage
           imageUrl={this.data.image__genrePage} />
         <PortfolioDescription
           description={this.data.description__genrePage} />
-        <PortfolioImage 
+        <PortfolioImage
           imageUrl={this.data.image__finalDeliverable} />
         <PortfolioDescription
           description={this.data.description__finalDescription} />
         <PortfolioDescription
           description={this.data.description__conclusion} />
 
-        <PortfolioFooter 
+        <PortfolioFooter
           footerData={this.data.footerData} />
       </main>
     );

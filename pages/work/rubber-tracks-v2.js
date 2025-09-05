@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Header from "../../components/Header/header";
-import '../../stylesheets/styles.scss';
 import { PortfolioDescription, PortfolioHeader, PortfolioImage, PortfolioFooter } from "../../components/PortfolioItems/portfolio-items";
 
 const converseV1Data = {
@@ -39,7 +38,7 @@ const converseV1Data = {
       "Tracks were made, artists recording the samples didn't make any money (we took care of the user side, but not so much the provider side except for the buyouts)."
     ],
     related: [
-      {      
+      {
         relatedTitle: 'Ampl Music',
         relatedLink: '/work/ampl-music'
       },
@@ -63,18 +62,18 @@ class RubberTracksPageV2 extends Component {
     return (
       <main>
         <Header />
-        <PortfolioHeader 
+        <PortfolioHeader
           headerData={this.data.headerData} />
         <h4 className="work-item__main-section work-item__header">Project Description</h4>
         <PortfolioDescription
           description={this.data.description__intro} />
         <div className="work-item__small-image">
-          <PortfolioImage 
+          <PortfolioImage
             imageUrl={this.data.image__converseV2Platform} />
         </div>
         <h4 className="work-item__main-section work-item__header work-item__header--sub-header">Kits and Favorites</h4>
         <div className="work-item__image-section">
-          <PortfolioImage 
+          <PortfolioImage
             imageUrl={this.data.image__kits} />
           <div className="work-item__image-description">
             <PortfolioDescription
@@ -86,32 +85,32 @@ class RubberTracksPageV2 extends Component {
             <PortfolioDescription
               description={this.data.description__favorites} />
           </div>
-          <PortfolioImage 
+          <PortfolioImage
             imageUrl={this.data.image__favorites} />
         </div>
         <h4 className="work-item__main-section work-item__header work-item__header--sub-header">Mobile</h4>
-        <PortfolioImage 
-            imageUrl={this.data.image__mobile} />
+        <PortfolioImage
+          imageUrl={this.data.image__mobile} />
         <PortfolioDescription
           description={this.data.description__mobile} />
         <h4 className="work-item__main-section work-item__header work-item__header--sub-header">DAW</h4>
-        <PortfolioImage 
-            imageUrl={this.data.image__daw} />
+        <PortfolioImage
+          imageUrl={this.data.image__daw} />
         <PortfolioDescription
           description={this.data.description__daw} />
         <h4 className="work-item__main-section work-item__header work-item__header--sub-header">Mixes</h4>
-        <PortfolioImage 
-            imageUrl={this.data.image__mixes} />
+        <PortfolioImage
+          imageUrl={this.data.image__mixes} />
         <PortfolioDescription
           description={this.data.description__mixes} />
         <h4 className="work-item__main-section work-item__header work-item__header--sub-header">Derivative Samples</h4>
-        <PortfolioImage 
-            imageUrl={this.data.image__derivativeSamples} />
+        <PortfolioImage
+          imageUrl={this.data.image__derivativeSamples} />
         <PortfolioDescription
           description={this.data.description__derivativeSamples} />
         <PortfolioDescription
           description={this.data.description__conclusion} />
-        <PortfolioFooter 
+        <PortfolioFooter
           footerData={this.data.footerData} />
       </main>
     );

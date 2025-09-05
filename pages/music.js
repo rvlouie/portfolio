@@ -1,7 +1,6 @@
 import { Component } from "react";
 // import PlaylistSoundPlayer from '../components/SouncloudPlayer/SoundcloudPlayer';
 import Header from "../components/Header/header";
-import '../stylesheets/styles.scss';
 
 // const CLIENT_ID = 'j34j8UCuL4LaOnjnyNb8VBOStI1RrtPI';
 // const RESOLVE_URL = 'https://soundcloud.com/rvlouie/tracks';

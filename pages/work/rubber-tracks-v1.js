@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Header from "../../components/Header/header";
-import '../../stylesheets/styles.scss';
 import { PortfolioDescription, PortfolioHeader, PortfolioImage, PortfolioFooter } from "../../components/PortfolioItems/portfolio-items";
 
 const converseV1Data = {
@@ -38,7 +37,7 @@ const converseV1Data = {
       {
         relatedTitle: 'Converse Rubber Tracks Sample Library V2',
         relatedLink: '/work/rubber-tracks-v2'
-      }  
+      }
     ]
   }
 }
@@ -55,19 +54,19 @@ class RubberTracksPage extends Component {
     return (
       <main>
         <Header />
-        <PortfolioHeader 
+        <PortfolioHeader
           headerData={this.data.headerData} />
         <h4 className="work-item__main-section work-item__header  ">Project Description</h4>
         <PortfolioDescription
           description={this.data.description__intro} />
-        <PortfolioImage 
+        <PortfolioImage
           imageUrl={this.data.image__converseOverview} />
         <PortfolioDescription
           description={this.data.description__wireframes} />
-        <PortfolioImage 
+        <PortfolioImage
           imageUrl={this.data.image__fakeWireframes} />
         <div className="work-item__image-section">
-          <PortfolioImage 
+          <PortfolioImage
             imageUrl={this.data.image__packDetails} />
           <div className="work-item__image-description">
             <PortfolioDescription
@@ -83,16 +82,16 @@ class RubberTracksPage extends Component {
             <PortfolioDescription
               description={this.data.description__packGallery2} />
           </div>
-          <PortfolioImage 
+          <PortfolioImage
             imageUrl={this.data.image__packGallery} />
         </div>
         <PortfolioDescription
           description={this.data.description__browse} />
-        <PortfolioImage 
+        <PortfolioImage
           imageUrl={this.data.image__packRows} />
         <PortfolioDescription
           description={this.data.description__conclusion} />
-        <PortfolioFooter 
+        <PortfolioFooter
           footerData={this.data.footerData} />
       </main>
     );

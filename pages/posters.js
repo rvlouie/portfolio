@@ -1,7 +1,6 @@
 import { Component } from "react";
-import {Image, Transformation, CloudinaryContext} from 'cloudinary-react';
+import { Cloudinary } from '@cloudinary/url-gen';
 import Header from "../components/Header/header";
-import '../stylesheets/styles.scss';
 import axios from "axios";
 
 class PostersPage extends Component {
@@ -10,6 +9,11 @@ class PostersPage extends Component {
     this.state = {
       gallery: []
     }
+    this.cld = new Cloudinary({
+      cloud: {
+        cloudName: 'dmizjakby'
+      }
+    });
   }
   static getInitialProps() {
     const isServer = typeof window === "undefined";
@@ -18,8 +22,8 @@ class PostersPage extends Component {
   componentDidMount() {
     axios.get('https://res.cloudinary.com/dmizjakby/image/list/poster.json')
       .then(res => {
-        this.setState({gallery: res.data.resources})
-    }) 
+        this.setState({ gallery: res.data.resources })
+      })
   }
 
 
@@ -33,19 +37,21 @@ class PostersPage extends Component {
           </h3>
         </section>
         <section className="posters__section">
-          <CloudinaryContext cloudName="dmizjakby">
-            {
+          {
+            this.state.gallery && this.state.gallery.length > 0 ?
               this.state.gallery.map(data => {
-                return(
-                  <a key={data.public_id} href={(data.context.custom.url == 'null') ? '#' : data.context.custom.url} 
-                     className={(data.context.custom.url == 'null') ? 'posters__no-link' : 'posters__link'}>
-                    <Image key={data.public_id} publicId={data.public_id + '.jpg'}>
-                    </Image>
+                return (
+                  <a key={data.public_id} href={(data.context && data.context.custom && data.context.custom.url == 'null') ? '#' : (data.context && data.context.custom && data.context.custom.url) || '#'}
+                    className={(data.context && data.context.custom && data.context.custom.url == 'null') ? 'posters__no-link' : 'posters__link'}>
+                    <img
+                      src={this.cld.image(data.public_id + '.jpg').toURL()}
+                      alt={data.public_id}
+                    />
                   </a>
                 )
-              })
-            }
-          </CloudinaryContext>
+              }) :
+              <p>Loading posters...</p>
+          }
         </section>
       </main>
     );

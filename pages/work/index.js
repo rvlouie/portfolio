@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Component } from "react";
 import Header from "../../components/Header/header";
-import '../../stylesheets/styles.scss';
 
 const musicalLinks = [
   {
@@ -80,7 +79,7 @@ class WorkPage extends Component {
     if (localStorage.validated) {
       this.setState({
         validated: localStorage.validated
-      })    
+      })
     }
   }
 
@@ -98,24 +97,24 @@ class WorkPage extends Component {
           </h3>
         </section>
         <div>
-          {!validated ? 
-            ( 
+          {!validated ?
+            (
               <form className="work__password-form" onSubmit={this.handleSubmit}>
                 <label className="work__password-label">Need access? Reach out to rvlouie@gmail.com or @rvlouie on social media. Otherwise, enter the password!</label>
-                <input className="work__password-input" type="password" value={this.state.password} onChange={this.handleChange} /> 
+                <input className="work__password-input" type="password" value={this.state.password} onChange={this.handleChange} />
                 {showErrorMessage && <div className="work__password-error">{errorMessage}</div>}
-                <button disabled={(password.length > 0) ? false : true} className={(password.length > 0) ? 'work__password-button' : 'work__password-button work__password-button--disabled'} type="submit" value="Submit">Show me the work</button>      
-              </form> 
+                <button disabled={(password.length > 0) ? false : true} className={(password.length > 0) ? 'work__password-button' : 'work__password-button work__password-button--disabled'} type="submit" value="Submit">Show me the work</button>
+              </form>
             ) :
             (
               <div>
                 <div className="work__link-section">
                   <h4 className="work__section-header">Musical systems</h4>
                   {
-                    this.musicalLinkData.map((link, index) => 
+                    this.musicalLinkData.map((link, index) =>
                       <section key={index} className="work__item">
                         <Link href={link.route}>
-                          <a>{link.name}</a>
+                          {link.name}
                         </Link>
                       </section>
                     )
@@ -124,10 +123,10 @@ class WorkPage extends Component {
                 <div>
                   <h4 className="work__section-header">Other projects and principles</h4>
                   {
-                    this.otherLinkData.map((link, index) => 
+                    this.otherLinkData.map((link, index) =>
                       <section key={index} className="work__item">
                         <Link href={link.route}>
-                          <a>{link.name}</a>
+                          {link.name}
                         </Link>
                       </section>
                     )

@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Header from "../../components/Header/header";
-import '../../stylesheets/styles.scss';
 import { PortfolioDescription, PortfolioHeader, PortfolioImage, PortfolioLink, PortfolioList, PortfolioFooter } from "../../components/PortfolioItems/portfolio-items";
 
 const converseV1Data = {
@@ -14,7 +13,7 @@ const converseV1Data = {
   link__artistSprint: {
     url: 'https://res.cloudinary.com/dmizjakby/image/upload/v1563912929/portfolio/decks/gickitajqbfdjsweetre.pdf',
     name: 'Content Admin Principles.pdf'
-  }, 
+  },
   footerData: {
     learnings: [
       `Making a platform fully serviceable lets that platform run on its own and either saves money or development cycles in the long run.`,
@@ -24,7 +23,7 @@ const converseV1Data = {
       {
         relatedTitle: 'Ampl Music',
         relatedLink: '/work/ampl-music'
-      }  
+      }
     ]
   }
 }
@@ -41,16 +40,16 @@ class RubberTracksPage extends Component {
     return (
       <main>
         <Header />
-        <PortfolioHeader 
+        <PortfolioHeader
           headerData={this.data.headerData} />
         <h4 className="work-item__main-section work-item__header">Project Description</h4>
         <h4 className="work-item__main-section work-item__header work-item__header--sub-header">Sprint</h4>
         <PortfolioDescription
           description={this.data.description__intro} />
-        <PortfolioLink 
+        <PortfolioLink
           link={this.data.link__artistSprint} />
 
-        <PortfolioFooter 
+        <PortfolioFooter
           footerData={this.data.footerData} />
       </main>
     );

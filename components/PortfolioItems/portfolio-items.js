@@ -79,8 +79,8 @@ class PortfolioList extends Component {
         <section className="work-item__section">
           <ul className="work-item__list">
             {
-              this.props.list.map(listItem => 
-                <li className="work-item__list-item">{listItem}</li>  
+              this.props.list.map(listItem =>
+                <li className="work-item__list-item">{listItem}</li>
               )
             }
           </ul>
@@ -96,7 +96,7 @@ class PortfolioImage extends Component {
   render() {
     return (
       <div className="work-item__image-container">
-        <img className="work-item__image" src={this.props.imageUrl} /> 
+        <img className="work-item__image" src={this.props.imageUrl} />
       </div>
     );
   }
@@ -109,7 +109,7 @@ class PortfolioLink extends Component {
     return (
       <div className="work-item__main-section">
         <section className="work-item__section">
-          <a className="work-item__link" href={this.props.link.url} target="_blank">{this.props.link.name}</a> 
+          <a className="work-item__link" href={this.props.link.url} target="_blank">{this.props.link.name}</a>
         </section>
       </div>
     );
@@ -141,23 +141,23 @@ class PortfolioFooter extends Component {
               <h4 className="work-item__header">Learnings? Next iterations? What did we miss?</h4>
               <ul className="work-item__list">
                 {
-                  this.props.footerData.learnings.map(learning => 
+                  this.props.footerData.learnings.map(learning =>
                     <li className="work-item__list-item">{learning}</li>)
                 }
               </ul>
             </div>
           }
           {
-            this.props.footerData.related && 
+            this.props.footerData.related &&
             <div className="work-item__section">
               <h4 className="work-item__header">Related projects</h4>
               <div className="work-item__related-links">
                 {
-                  this.props.footerData.related.map(related => 
-                    <Link href={related.relatedLink}>
-                      <a className="work-item__related-link">{related.relatedTitle}</a>
+                  this.props.footerData.related.map(related =>
+                    <Link href={related.relatedLink} className="work-item__related-link">
+                      {related.relatedTitle}
                     </Link>
-                    )
+                  )
                 }
               </div>
             </div>

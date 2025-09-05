@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Header from "../../components/Header/header";
-import '../../stylesheets/styles.scss';
 import { PortfolioDescription, PortfolioHeader, PortfolioImage, PortfolioFooter } from "../../components/PortfolioItems/portfolio-items";
 
 const converseV1Data = {
@@ -54,7 +53,7 @@ const converseV1Data = {
       `Finding the right market fit is hard. While we had a pretty clear product vision, there were some informal talks with industry professionals that challenged our assumptions. We probably needed more formal research to suss out where in the market this would fit. But! More to come on that. We were acquired during the private beta and this project was to be reused...`
     ],
     related: [
-      {      
+      {
         relatedTitle: 'Royalty Bearing Sample Library (WIP)',
         relatedLink: '/work'
       },
@@ -78,72 +77,72 @@ class RubberTracksPageV2 extends Component {
     return (
       <main>
         <Header />
-        <PortfolioHeader 
+        <PortfolioHeader
           headerData={this.data.headerData} />
         <h4 className="work-item__main-section work-item__header">Project Description</h4>
-        <PortfolioImage 
-            imageUrl={this.data.image__AmplPlatform} />
+        <PortfolioImage
+          imageUrl={this.data.image__AmplPlatform} />
         <PortfolioDescription
           description={this.data.description__intro} />
         <h4 className="work-item__main-section work-item__header">Ingestion Pipeline and Admin</h4>
         <PortfolioDescription
           description={this.data.description__ingestion} />
-        <PortfolioImage 
-            imageUrl={this.data.image__dawBreakdown} />
+        <PortfolioImage
+          imageUrl={this.data.image__dawBreakdown} />
         <PortfolioDescription
           description={this.data.description__ingestion2} />
-        <PortfolioImage 
-            imageUrl={this.data.image__ingestionFlow} />
+        <PortfolioImage
+          imageUrl={this.data.image__ingestionFlow} />
         <PortfolioDescription
           description={this.data.description__audioTimeline} />
-        <PortfolioImage 
-            imageUrl={this.data.image__audioTimeline} />
+        <PortfolioImage
+          imageUrl={this.data.image__audioTimeline} />
         <PortfolioDescription
           description={this.data.description__ingestionConclusion} />
-        <PortfolioImage 
-            imageUrl={this.data.image__knowledgeGraph} />
+        <PortfolioImage
+          imageUrl={this.data.image__knowledgeGraph} />
         <PortfolioDescription
           description={this.data.description__knowledgeGraph} />
-        <PortfolioImage 
-            imageUrl={this.data.image__adminIa} />
+        <PortfolioImage
+          imageUrl={this.data.image__adminIa} />
         <PortfolioDescription
           description={this.data.description__music} />
-        <PortfolioImage 
-            imageUrl={this.data.image__music} />
+        <PortfolioImage
+          imageUrl={this.data.image__music} />
         <PortfolioDescription
           description={this.data.description__stem} />
-        <PortfolioImage 
-            imageUrl={this.data.image__stem} />
+        <PortfolioImage
+          imageUrl={this.data.image__stem} />
         <PortfolioDescription
           description={this.data.description__personnel} />
-        <PortfolioImage 
-            imageUrl={this.data.image__personnel} />
+        <PortfolioImage
+          imageUrl={this.data.image__personnel} />
         <PortfolioDescription
           description={this.data.description__ingestionEnd} />
         <h4 className="work-item__main-section work-item__header">User facing front end</h4>
         <PortfolioDescription
           description={this.data.description__frontEndIntro} />
-        <PortfolioImage 
-            imageUrl={this.data.image__frontEndIntro} />
+        <PortfolioImage
+          imageUrl={this.data.image__frontEndIntro} />
         <PortfolioDescription
           description={this.data.description__frontEndIa} />
-        <PortfolioImage 
-            imageUrl={this.data.image__frontEndIa} />
+        <PortfolioImage
+          imageUrl={this.data.image__frontEndIa} />
         <PortfolioDescription
           description={this.data.description__frontEndUi} />
-        <PortfolioImage 
-            imageUrl={this.data.image__frontEndUi} />
+        <PortfolioImage
+          imageUrl={this.data.image__frontEndUi} />
         <PortfolioDescription
           description={this.data.description__frontEndIaDiscussion} />
         <PortfolioDescription
           description={this.data.description__contentDiscussion} />
-        <PortfolioImage 
-            imageUrl={this.data.image__contentDiscussion} />
+        <PortfolioImage
+          imageUrl={this.data.image__contentDiscussion} />
         <PortfolioDescription
           description={this.data.description__frontEndConclusion1} />
         <PortfolioDescription
           description={this.data.description__frontEndConclusion2} />
-        <PortfolioFooter 
+        <PortfolioFooter
           footerData={this.data.footerData} />
       </main>
     );
