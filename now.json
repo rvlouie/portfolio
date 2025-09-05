@@ -1,1 +1,11 @@
-{"version":2,"name":"portfolio","builds":[{"src":"package.json","use":"@now/next"}],"alias": "ricklouie.org"}
+{
+    "version": 2,
+    "name": "portfolio",
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/next"
+        }
+    ],
+    "alias": "ricklouie.org"
+}
